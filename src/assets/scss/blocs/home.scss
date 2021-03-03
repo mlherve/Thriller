@@ -1,0 +1,51 @@
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: "horreur";
+}
+
+.home div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home--titre {
+  font-family: "creepster";
+  margin: 17vh 0 10vh;
+  font-size: 5em;
+  font-weight: 100;
+  letter-spacing: 0.4rem;
+}
+
+.home a {
+  font-size: 3em;
+  color: (--secondary-color);
+}
+
+.home--bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
