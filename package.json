@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build",
+    "build": "parcel build src/index.pug",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "parcel src/index.pug"
   },
