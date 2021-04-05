@@ -1,0 +1,57 @@
+.clip {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 7vw;
+  @include small {
+    flex-direction: row;
+  }
+  @include medium {
+    flex-direction: column;
+  }
+  @include large-only {
+    flex-direction: row;
+  }
+}
+.clip__description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
+  @include medium {
+    flex-direction: column;
+  }
+}
+.clip__description--texte {
+  padding: 3vw;
+  line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
+  @include medium {
+    font-size: 1.8em;
+  }
+}
+.clip__signature {
+  width: 50%;
+  padding: 20px;
+  @include medium {
+    width: 25%;
+  }
+  @include large-only {
+    width: 30%;
+  }
+}
+.clip__screen {
+  max-width: 90%;
+  margin-top: 0 auto;
+  @include small {
+    max-width: 40%;
+  }
+  @include medium {
+    max-width: 45%;
+  }
+}

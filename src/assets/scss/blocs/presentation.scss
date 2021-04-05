@@ -1,0 +1,44 @@
+.presentation {
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 7vw;
+  @include small {
+    flex-direction: row;
+  }
+}
+.presentation__description {
+  padding: 3vw;
+  background-color: var(--blue-bg);
+  border-radius: 25px;
+  color: var(--white-color);
+  line-height: 2;
+  text-align: justify;
+  text-justify: inter-word;
+  box-shadow: 2px 2px 31px 1px rgba(0, 0, 0, 0.44);
+  -webkit-box-shadow: 2px 2px 31px 1px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 2px 2px 31px 1px rgba(0, 0, 0, 0.44);
+  @include medium {
+    font-size: 2em;
+  }
+}
+
+.presentation__description--titre {
+  font-family: "creepster";
+  color: var(--secondary-color);
+  font-weight: 100;
+  letter-spacing: 0.2rem;
+}
+.presentation__mortVivant {
+  max-width: 70%;
+
+  @include small {
+    max-width: 30%;
+  }
+  @include medium {
+    max-width: 35%;
+  }
+}
