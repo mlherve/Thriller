@@ -7,6 +7,8 @@
   background-color: var(--primary-color);
   color: var(--secondary-color);
   font-family: "horreur";
+  position: relative;
+  overflow: hidden;
 }
 
 .home div {
@@ -15,23 +17,43 @@
   align-items: center;
 }
 
-.home--titre {
-  font-family: "creepster";
-  margin: 20vh 0 10vh;
+.home__titre {
+  font-family: "creepster", cursive;
   font-size: 5em;
   font-weight: 100;
   letter-spacing: 0.4rem;
+  padding: 10vh 0 10vh;
+  @include medium {
+    padding: 20vh 0 10vh;
+  }
+  @include large-only {
+    font-size: 8em;
+  }
 }
 
+.home__sang {
+  display: block;
+  @include small {
+    display: none;
+  }
+}
 .home a {
-  font-size: 3em;
   color: (--secondary-color);
+  display: flex;
+  justify-content: center;
 }
 
-.home--bounce {
+.home__bounce {
   -moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
+  width: 20%;
+  @include medium {
+    width: 30%;
+  }
+  @include large-only {
+    width: 25%;
+  }
 }
 
 @keyframes bounce {
@@ -48,4 +70,18 @@
   60% {
     transform: translateY(-15px);
   }
+}
+
+.hero_fg {
+  pointer-events: none;
+  z-index: 1;
+  position: absolute;
+  height: 344px;
+  width: 1920px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
 }
